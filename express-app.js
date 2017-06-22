@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
     req.checkBody("addItem", "You can't submit a blank to do item! Please use your words.").notEmpty();
     var errors = req.validationErrors();
     if (errors) {
-      let html = '<h2>Whoa there! You actually need to enter a word!</h2>';
+      let html = 'You need to submit a todo item!';
       res.send(html);
     } else {
         var addItem = req.body.addItem;
