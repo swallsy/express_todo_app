@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Express To Do App</title>
+  </head>
+  <body>
+
+              <form action="/" method="post" class="todo-list">
+                    <input type="text" name="todo">
+                    <label name="todo">Write a To Do Item</label>
+                    <select name="priority">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                    <input type="submit" value="submit">
+              </form>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <ul>
+                {{#todos}}
+                {{#dataValues}}
+                  <li><input type="checkbox" name="{{todo}}"><label>{{todo}}. </label>Priority: {{priority}}</li>
+                {{/dataValues}}
+                {{/todos}}
+
+              </ul>
+            </div>
+          </div>
+        </div>
+  </body>
+</html>
